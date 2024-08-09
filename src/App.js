@@ -6,7 +6,7 @@ const helloimg = <img className="profile" src='/Cute_Hamster.png' alt='Cute Hams
 
 
 function App() {
-  const [message, setMessage] = useState("Hello, world!");
+  const [message, setMessage] = useState("Hello, Nikita!");
   const [textColor, setTextColor] = useState("red");
   const [textWeight, setTextWeight] = useState("bold");
 
