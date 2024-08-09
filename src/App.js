@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import "./App.css";
 
 let count = 0;
+const helloimg = <img className="profile" src='/Cute_Hamster.png' alt='Cute Hamster' />;
+
 
 function App() {
   const [message, setMessage] = useState("Hello, world!");
   const [textColor, setTextColor] = useState("red");
   const [textWeight, setTextWeight] = useState("bold");
-  const [fontStyle, setFontStyle] = useState("normal");
 
   const changeMessage = () => {
     if (count === 0) {
@@ -23,25 +25,19 @@ function App() {
 
   const changeTextStyle = () => {
     setTextWeight(prevWeight => (prevWeight === "bold" ? "normal" : "bold"));
-    setFontStyle(prevStyle => (prevStyle === "normal" ? "italic" : "normal"));
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div className="App">
+      {helloimg}
       <h1 style={{ color: textColor, fontWeight: textWeight }}>{message}</h1>
-      <button 
-        onClick={changeMessage} 
-        style={{ borderRadius: '5px', margin: '10px' }}>
+      <button onClick={changeMessage}>
         Click Me!
       </button>
-      <button 
-        onClick={changeColor} 
-        style={{ borderRadius: '5px', margin: '10px' }}>
+      <button onClick={changeColor}>
         Click Me to change text color!
       </button>
-      <button 
-        onClick={changeTextStyle}
-        style={{ borderRadius: '5px', margin: '10px' }}>
+      <button onClick={changeTextStyle}>
         Click Me to change text style!
       </button>
     </div>

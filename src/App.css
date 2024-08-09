@@ -1,38 +1,96 @@
 .App {
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile{
+  width: 200px;
+  border-radius: 50%;
+
+}
+/* Button styling */
+button {
+  background-color: #0eaeb9; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the buttons inline */
+  font-size: 16px; /* Increase font size */
+  margin: 10px; /* Some space between buttons */
+  cursor: pointer; /* Pointer/hand icon */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and scaling */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #065359; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:active {
+  background-color: #065359; /* Even darker green when clicked */
+  transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Container styling */
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #070707;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr:hover {
+  background-color: #ddd;
+}
+
+/* List styling */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  padding: 5px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Text styling */
+.container div {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
 }

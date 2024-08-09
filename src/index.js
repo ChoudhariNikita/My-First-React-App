@@ -2,7 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Render from './Render';
 import reportWebVitals from './reportWebVitals';
+
+
+// Renders components
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+    <Render/>
+  </React.StrictMode>
+);
+
 
 // "use strict"; // Applies to the entire script
 
@@ -20,12 +32,6 @@ let myfuncweird=(number)=>{
 myFunction();
 myfuncweird(10);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
 // document.addEventListener('click',function click(){
 //   alert('You\'ve clicked the button!');
